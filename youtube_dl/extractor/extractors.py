@@ -194,6 +194,10 @@ from .chirbit import (
     ChirbitProfileIE,
 )
 from .cinchcast import CinchcastIE
+from .ciscolive import (
+    CiscoLiveSessionIE,
+    CiscoLiveSearchIE,
+)
 from .cjsw import CJSWIE
 from .cliphunter import CliphunterIE
 from .clippit import ClippitIE
@@ -407,6 +411,7 @@ from .funk import (
 from .funnyordie import FunnyOrDieIE
 from .fusion import FusionIE
 from .fxnetworks import FXNetworksIE
+from .gaia import GaiaIE
 from .gameinformer import GameInformerIE
 from .gameone import (
     GameOneIE,
@@ -447,6 +452,7 @@ from .hellporno import HellPornoIE
 from .helsinki import HelsinkiIE
 from .hentaistigma import HentaiStigmaIE
 from .hgtv import HGTVComShowIE
+from .hketv import HKETVIE
 from .hidive import HiDiveIE
 from .historicfilms import HistoricFilmsIE
 from .hitbox import HitboxIE, HitboxLiveIE
@@ -465,6 +471,10 @@ from .hrti import (
 )
 from .huajiao import HuajiaoIE
 from .huffpost import HuffPostIE
+from .hungama import (
+    HungamaIE,
+    HungamaSongIE,
+)
 from .hypem import HypemIE
 from .iconosquare import IconosquareIE
 from .ign import (
@@ -479,12 +489,17 @@ from .imdb import (
 from .imgur import (
     ImgurIE,
     ImgurAlbumIE,
+    ImgurGalleryIE,
 )
 from .ina import InaIE
 from .inc import IncIE
 from .indavideo import IndavideoEmbedIE
 from .infoq import InfoQIE
-from .instagram import InstagramIE, InstagramUserIE
+from .instagram import (
+    InstagramIE,
+    InstagramUserIE,
+    InstagramTagIE,
+)
 from .internazionale import InternazionaleIE
 from .internetvideoarchive import InternetVideoArchiveIE
 from .iprima import IPrimaIE
@@ -549,6 +564,11 @@ from .lcp import (
 )
 from .learnr import LearnrIE
 from .lecture2go import Lecture2GoIE
+from .lecturio import (
+    LecturioIE,
+    LecturioCourseIE,
+    LecturioDeCourseIE,
+)
 from .leeco import (
     LeIE,
     LePlaylistIE,
@@ -672,11 +692,7 @@ from .myvi import (
     MyviEmbedIE,
 )
 from .myvidster import MyVidsterIE
-from .nationalgeographic import (
-    NationalGeographicVideoIE,
-    NationalGeographicIE,
-    NationalGeographicEpisodeGuideIE,
-)
+from .nationalgeographic import NationalGeographicVideoIE
 from .naver import NaverIE
 from .nba import NBAIE
 from .nbc import (
@@ -818,6 +834,7 @@ from .orf import (
     ORFOE1IE,
     ORFIPTVIE,
 )
+from .outsidetv import OutsideTVIE
 from .packtpub import (
     PacktPubIE,
     PacktPubCourseIE,
@@ -846,6 +863,7 @@ from .piksel import PikselIE
 from .pinkbike import PinkbikeIE
 from .pladform import PladformIE
 from .playfm import PlayFMIE
+from .playplustv import PlayPlusTVIE
 from .plays import PlaysTVIE
 from .playtvak import PlaytvakIE
 from .playvid import PlayvidIE
@@ -1082,6 +1100,10 @@ from .tass import TassIE
 from .tastytrade import TastyTradeIE
 from .tbs import TBSIE
 from .tdslifeway import TDSLifewayIE
+from .teachable import (
+    TeachableIE,
+    TeachableCourseIE,
+)
 from .teachertube import (
     TeacherTubeIE,
     TeacherTubeUserIE,
@@ -1120,6 +1142,10 @@ from .thisamericanlife import ThisAmericanLifeIE
 from .thisav import ThisAVIE
 from .thisoldhouse import ThisOldHouseIE
 from .threeqsdn import ThreeQSDNIE
+from .tiktok import (
+    TikTokIE,
+    TikTokUserIE,
+)
 from .tinypic import TinyPicIE
 from .tmz import (
     TMZIE,
@@ -1175,7 +1201,9 @@ from .tvnet import TVNetIE
 from .tvnoe import TVNoeIE
 from .tvnow import (
     TVNowIE,
-    TVNowListIE,
+    TVNowNewIE,
+    TVNowSeasonIE,
+    TVNowAnnualIE,
     TVNowShowIE,
 )
 from .tvp import (
@@ -1226,10 +1254,6 @@ from .uol import UOLIE
 from .uplynk import (
     UplynkIE,
     UplynkPreplayIE,
-)
-from .upskill import (
-    UpskillIE,
-    UpskillCourseIE,
 )
 from .urort import UrortIE
 from .urplay import URPlayIE
@@ -1299,6 +1323,7 @@ from .vimeo import (
     VimeoReviewIE,
     VimeoUserIE,
     VimeoWatchLaterIE,
+    VHXEmbedIE,
 )
 from .vimple import VimpleIE
 from .vine import (
@@ -1348,6 +1373,7 @@ from .vuclip import VuClipIE
 from .vvvvid import VVVVIDIE
 from .vyborymos import VyboryMosIE
 from .vzaar import VzaarIE
+from .wakanim import WakanimIE
 from .walla import WallaIE
 from .washingtonpost import (
     WashingtonPostIE,
@@ -1386,6 +1412,7 @@ from .wsj import (
     WSJIE,
     WSJArticleIE,
 )
+from .wwe import WWEIE
 from .xbef import XBefIE
 from .xboxclips import XboxClipsIE
 from .xfileshare import XFileShareIE
@@ -1478,3 +1505,4 @@ from .zattoo import (
 )
 from .zdf import ZDFIE, ZDFChannelIE
 from .zingmp3 import ZingMp3IE
+from .zype import ZypeIE
