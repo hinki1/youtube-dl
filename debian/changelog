@@ -1,3 +1,10 @@
+youtube-dl (2019.08.02-1) stretch; urgency=medium
+
+  * Non-maintainer upload.
+  * pull new upstream version
+
+ -- Matthias Hinkfoth <hinki@abwesend.de>  Tue, 06 Aug 2019 17:06:24 +0200
+
 youtube-dl (2019.01.27-1) stretch; urgency=medium
 
   * Non-maintainer upload.
