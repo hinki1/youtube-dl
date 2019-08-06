@@ -217,10 +217,13 @@ class FFmpegPostProcessor(PostProcessor):
                 encodeArgument('-i'),
                 encodeFilename(self._ffmpeg_filename_argument(path), True)
             ])
-        cmd = ([encodeFilename(self.executable, True), encodeArgument('-y')] +
-               files_cmd +
-               [encodeArgument(o) for o in opts] +
-               [encodeFilename(self._ffmpeg_filename_argument(out_path), True)])
+        cmd = [encodeFilename(self.executable, True), encodeArgument('-y')]
+        # avconv does not have repeat option
+        if self.basename == 'ffmpeg':
+            cmd += [encodeArgument('-loglevel'), encodeArgument('repeat+info')]
+        cmd += (files_cmd
+                + [encodeArgument(o) for o in opts]
+                + [encodeFilename(self._ffmpeg_filename_argument(out_path), True)])
 
         if self._downloader.params.get('verbose', False):
             self._downloader.to_screen('[debug] ffmpeg command line: %s' % shell_quote(cmd))
@@ -323,8 +326,8 @@ class FFmpegExtractAudioPP(FFmpegPostProcessor):
         information['ext'] = extension
 
         # If we download foo.mp3 and convert it to... foo.mp3, then don't delete foo.mp3, silly.
-        if (new_path == path or
-                (self._nopostoverwrites and os.path.exists(encodeFilename(new_path)))):
+        if (new_path == path
+                or (self._nopostoverwrites and os.path.exists(encodeFilename(new_path)))):
             self._downloader.to_screen('[ffmpeg] Post-process file %s exists, skipping' % new_path)
             return [], information
 
@@ -407,6 +410,9 @@ class FFmpegEmbedSubtitlePP(FFmpegPostProcessor):
             # Don't copy the existing subtitles, we may be running the
             # postprocessor a second time
             '-map', '-0:s',
+            # Don't copy Apple TV chapters track, bin_data (see #19042, #19024,
+            # https://trac.ffmpeg.org/ticket/6016)
+            '-map', '-0:d',
         ]
         if information['ext'] == 'mp4':
             opts += ['-c:s', 'mov_text']
