@@ -18,10 +18,10 @@ from .acast import (
     ACastIE,
     ACastChannelIE,
 )
-from .addanime import AddAnimeIE
 from .adn import ADNIE
 from .adobeconnect import AdobeConnectIE
 from .adobetv import (
+    AdobeTVEmbedIE,
     AdobeTVIE,
     AdobeTVShowIE,
     AdobeTVChannelIE,
@@ -223,7 +223,6 @@ from .comedycentral import (
     ComedyCentralTVIE,
     ToshIE,
 )
-from .comcarcoff import ComCarCoffIE
 from .commonmistakes import CommonMistakesIE, UnicodeBOMIE
 from .commonprotocols import (
     MmsIE,
@@ -253,10 +252,6 @@ from .dailymotion import (
     DailymotionIE,
     DailymotionPlaylistIE,
     DailymotionUserIE,
-)
-from .daisuki import (
-    DaisukiMottoIE,
-    DaisukiMottoPlaylistIE,
 )
 from .daum import (
     DaumIE,
@@ -513,9 +508,9 @@ from .keezmovies import KeezMoviesIE
 from .ketnet import KetnetIE
 from .khanacademy import KhanAcademyIE
 from .kickstarter import KickStarterIE
+from .kinja import KinjaEmbedIE
 from .kinopoisk import KinoPoiskIE
 from .konserthusetplay import KonserthusetPlayIE
-from .kontrtube import KontrTubeIE
 from .krasview import KrasViewIE
 from .ku6 import Ku6IE
 from .kusi import KUSIIE
@@ -628,7 +623,6 @@ from .microsoftvirtualacademy import (
     MicrosoftVirtualAcademyIE,
     MicrosoftVirtualAcademyCourseIE,
 )
-from .minhateca import MinhatecaIE
 from .ministrygrid import MinistryGridIE
 from .minoto import MinotoIE
 from .miomio import MioMioIE
@@ -638,7 +632,6 @@ from .mixcloud import (
     MixcloudIE,
     MixcloudUserIE,
     MixcloudPlaylistIE,
-    MixcloudStreamIE,
 )
 from .mlb import MLBIE
 from .mnet import MnetIE
@@ -663,7 +656,6 @@ from .mtv import (
     MTVJapanIE,
 )
 from .muenchentv import MuenchenTVIE
-from .musicplayon import MusicPlayOnIE
 from .mwave import MwaveIE, MwaveMeetGreetIE
 from .mychannels import MyChannelsIE
 from .myspace import MySpaceIE, MySpaceAlbumIE
@@ -803,10 +795,6 @@ from .ooyala import (
     OoyalaIE,
     OoyalaExternalIE,
 )
-from .openload import (
-    OpenloadIE,
-    VerystreamIE,
-)
 from .ora import OraTVIE
 from .orf import (
     ORFTVthekIE,
@@ -820,7 +808,6 @@ from .packtpub import (
     PacktPubIE,
     PacktPubCourseIE,
 )
-from .pandatv import PandaTVIE
 from .pandoratv import PandoraTVIE
 from .parliamentliveuk import ParliamentLiveUKIE
 from .patreon import PatreonIE
@@ -932,10 +919,6 @@ from .rentv import (
 from .restudy import RestudyIE
 from .reuters import ReutersIE
 from .reverbnation import ReverbNationIE
-from .revision3 import (
-    Revision3EmbedIE,
-    Revision3IE,
-)
 from .rice import RICEIE
 from .rmcdecouverte import RMCDecouverteIE
 from .ro220 import Ro220IE
@@ -979,7 +962,10 @@ from .savefrom import SaveFromIE
 from .sbs import SBSIE
 from .screencast import ScreencastIE
 from .screencastomatic import ScreencastOMaticIE
-from .scrippsnetworks import ScrippsNetworksWatchIE
+from .scrippsnetworks import (
+    ScrippsNetworksWatchIE,
+    ScrippsNetworksIE,
+)
 from .scte import (
     SCTEIE,
     SCTECourseIE,
@@ -1071,7 +1057,6 @@ from .srmediathek import SRMediathekIE
 from .stanfordoc import StanfordOpenClassroomIE
 from .steam import SteamIE
 from .streamable import StreamableIE
-from .streamango import StreamangoIE
 from .streamcloud import StreamcloudIE
 from .streamcz import StreamCZIE
 from .streetvoice import StreetVoiceIE
@@ -1183,8 +1168,12 @@ from .turbo import TurboIE
 from .tv2 import (
     TV2IE,
     TV2ArticleIE,
+    KatsomoIE,
 )
-from .tv2dk import TV2DKIE
+from .tv2dk import (
+    TV2DKIE,
+    TV2DKBornholmPlayIE,
+)
 from .tv2hu import TV2HuIE
 from .tv4 import TV4IE
 from .tv5mondeplus import TV5MondePlusIE
@@ -1241,13 +1230,17 @@ from .twitter import (
     TwitterCardIE,
     TwitterIE,
     TwitterAmplifyIE,
+    TwitterBroadcastIE,
 )
 from .udemy import (
     UdemyIE,
     UdemyCourseIE
 )
 from .udn import UDNEmbedIE
-from .ufctv import UFCTVIE
+from .ufctv import (
+    UFCTVIE,
+    UFCArabiaIE,
+)
 from .uktvplay import UKTVPlayIE
 from .digiteka import DigitekaIE
 from .dlive import (
@@ -1301,7 +1294,6 @@ from .videomore import (
     VideomoreVideoIE,
     VideomoreSeasonIE,
 )
-from .videopremium import VideoPremiumIE
 from .videopress import VideoPressIE
 from .vidio import VidioIE
 from .vidlii import VidLiiIE
