@@ -1,3 +1,10 @@
+youtube-dl (2020.01.24-1) buster; urgency=medium
+
+  * Non-maintainer upload.
+  * new upstream release
+
+ -- Matthias Hinkfoth <hinki@abwesend.de>  Wed, 29 Jan 2020 16:26:48 +0100
+
 youtube-dl (2019.11.03-1) buster; urgency=medium
 
   * Non-maintainer upload.
