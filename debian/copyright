@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: youtube-dl
-Upstream-Contact: https://github.com/rg3/youtube-dl
-Source: https://github.com/rg3/youtube-dl
+Upstream-Contact: https://ytdl-org.github.io/youtube-dl/
+Source: https://github.com/ytdl-org/youtube-dl/
 
 Files: *
 Copyright: none
@@ -35,7 +35,7 @@ License: public-domain
 
 Files: debian/*
 Copyright: © 2006, Robert S. Edmonds <edmonds@debian.org>.
-	   © 2009-2018, Rogério Brito <rbrito@ime.usp.br>.
+           © 2009-2019, Rogério Brito <rbrito@ime.usp.br>.
 License: GPL-2+
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by

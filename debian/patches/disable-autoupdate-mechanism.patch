@@ -15,11 +15,29 @@ Last-Update: 2018-03-16
  youtube_dl/options.py  | 2 +-
  2 files changed, 7 insertions(+), 2 deletions(-)
 
-diff --git a/youtube_dl/__init__.py b/youtube_dl/__init__.py
-index 9bb9524..7bf379b 100644
+--- a/README.md
++++ a/README.md
+@@ -53,9 +53,6 @@
+ # OPTIONS
+     -h, --help                       Print this help text and exit
+     --version                        Print program version and exit
+-    -U, --update                     Update this program to latest version. Make
+-                                     sure that you have sufficient permissions
+-                                     (run with sudo if needed)
+     -i, --ignore-errors              Continue on download errors, for example to
+                                      skip unavailable videos in a playlist
+     --abort-on-error                 Abort downloading of further videos (in the
 --- a/youtube_dl/__init__.py
 +++ b/youtube_dl/__init__.py
-@@ -438,7 +438,12 @@ def _real_main(argv=None):
+@@ -36,7 +36,6 @@
+     write_string,
+     render_table,
+ )
+-from .update import update_self
+ from .downloader import (
+     FileDownloader,
+ )
+@@ -441,7 +440,12 @@
      with YoutubeDL(ydl_opts) as ydl:
          # Update version
          if opts.update_self:
@@ -33,11 +51,9 @@ index 9bb9524..7bf379b 100644
  
          # Remove cache dir
          if opts.rm_cachedir:
-diff --git a/youtube_dl/options.py b/youtube_dl/options.py
-index 7d1bbc0..cafca0c 100644
 --- a/youtube_dl/options.py
 +++ b/youtube_dl/options.py
-@@ -140,7 +140,7 @@ def parseOpts(overrideArguments=None):
+@@ -140,7 +140,7 @@
      general.add_option(
          '-U', '--update',
          action='store_true', dest='update_self',
