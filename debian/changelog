@@ -1,3 +1,9 @@
+youtube-dl (2020.11.12-1) buster; urgency=medium
+
+  * New upstream version 2020.11.12
+
+ -- Matthias Hinkfoth <hinki@abwesend.de>  Mon, 16 Nov 2020 21:00:58 +0100
+
 youtube-dl (2020.09.20-1) unstable; urgency=medium
 
   * New upstream version 2020.09.20.
