@@ -1,3 +1,43 @@
+version 2020.11.18
+
+Extractors
+* [spiegel] Fix extraction (#24206, #24767)
+* [youtube] Improve extraction
+    + Add support for --no-playlist (#27009)
+    * Improve playlist and mix extraction (#26390, #26509, #26534, #27011)
+    + Extract playlist uploader data
+* [youtube:tab] Fix view count extraction (#27051)
+* [malltv] Fix extraction (#27035)
++ [bandcamp] Extract playlist description (#22684)
+* [urplay] Fix extraction (#26828)
+* [youtube:tab] Fix playlist title extraction (#27015)
+* [youtube] Fix chapters extraction (#26005)
+
+
+version 2020.11.17
+
+Core
+* [utils] Skip ! prefixed code in js_to_json
+
+Extractors
+* [youtube:tab] Fix extraction with cookies provided (#27005)
+* [lrt] Fix extraction with empty tags (#20264)
++ [ndr:embed:base] Extract subtitles (#25447, #26106)
++ [servus] Add support for pm-wissen.com (#25869)
+* [servus] Fix extraction (#26872, #26967, #26983, #27000)
+* [xtube] Fix extraction (#26996)
+* [lrt] Fix extraction
++ [lbry] Add support for lbry.tv
++ [condenast] Extract subtitles
+* [condenast] Fix extraction
+* [bandcamp] Fix extraction (#26681, #26684)
+* [rai] Fix RaiPlay extraction (#26064, #26096)
+* [vlive] Fix extraction
+* [usanetwork] Fix extraction
+* [nbc] Fix NBCNews/Today/MSNBC extraction
+* [cnbc] Fix extraction
+
+
 version 2020.11.12
 
 Extractors

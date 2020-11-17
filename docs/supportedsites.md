@@ -417,6 +417,7 @@
  - **la7.it**
  - **laola1tv**
  - **laola1tv:embed**
+ - **lbry.tv**
  - **LCI**
  - **Lcp**
  - **LcpPlay**
@@ -823,8 +824,6 @@
  - **SpankBangPlaylist**
  - **Spankwire**
  - **Spiegel**
- - **Spiegel:Article**: Articles on spiegel.de
- - **Spiegeltv**
  - **sport.francetvinfo.fr**
  - **Sport5**
  - **SportBox**
@@ -1042,7 +1041,6 @@
  - **vk:wallpost**
  - **vlive**
  - **vlive:channel**
- - **vlive:playlist**
  - **Vodlocker**
  - **VODPl**
  - **VODPlatform**

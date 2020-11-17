@@ -529,6 +529,7 @@ from .laola1tv import (
     EHFTVIE,
     ITTFIE,
 )
+from .lbry import LBRYIE
 from .lci import LCIIE
 from .lcp import (
     LcpPlayIE,
@@ -1053,8 +1054,7 @@ from .spankbang import (
     SpankBangPlaylistIE,
 )
 from .spankwire import SpankwireIE
-from .spiegel import SpiegelIE, SpiegelArticleIE
-from .spiegeltv import SpiegeltvIE
+from .spiegel import SpiegelIE
 from .spike import (
     BellatorIE,
     ParamountNetworkIE,
@@ -1357,7 +1357,6 @@ from .vk import (
 from .vlive import (
     VLiveIE,
     VLiveChannelIE,
-    VLivePlaylistIE
 )
 from .vodlocker import VodlockerIE
 from .vodpl import VODPlIE
